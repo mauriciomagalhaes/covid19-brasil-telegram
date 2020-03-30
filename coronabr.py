@@ -17,7 +17,7 @@ chtid = os.getenv("CHAT_ID").split(',')
 lastup = os.getenv("LASTUPDATE")
 
 try:
-    req = requests.get("https://thevirustracker.com/free-api?countryTotal=BR", headers={"User-Agent": "windows10"})
+    req = requests.get("https://thevirustracker.com/free-api?countryTotal=BR", headers={"User-Agent": "windows10", 'Cache-Control': 'no-cache'})
 except:
     print('Problemas com acesso a página')
     exit()
